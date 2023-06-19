@@ -1,0 +1,20 @@
+.section-buttons {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto 20px;
+}
+
+.section-buttons > .offset-border {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.wipe-button {
+    flex-grow: 1;
+    height: 200px;
+    border: none;
+}
+
+.card-title {
+    color: white;
+}

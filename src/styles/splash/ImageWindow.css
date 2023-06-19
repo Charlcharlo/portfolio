@@ -1,0 +1,17 @@
+.image-window {
+    width: 100%;
+    height: 500px;
+    flex-grow: 1;
+}
+
+.image-window img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right bottom;
+}
+
+.window-contents {
+    width: 100%;
+    height: 100%;
+}
