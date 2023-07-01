@@ -10,6 +10,10 @@ export default function ImageWindow() {
             src={`${window.location.origin}/images/morningside-color-fix.jpg`}
             alt=""
           />
+          <div className="window-title">
+            <h1>Charl Oosthuizen</h1>
+            <h2>Web Developer</h2>
+          </div>
         </div>
       </DoubleVertical>
     </div>

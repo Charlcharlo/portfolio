@@ -4,7 +4,7 @@ import SplashLink from "./SplashLink";
 
 export default function SplashLinks() {
   function mapLink(link, i) {
-    return <SplashLink key={i} title={link.name} index={i} />;
+    return <SplashLink key={i} data={link} index={i} />;
   }
 
   return (

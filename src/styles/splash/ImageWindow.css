@@ -1,6 +1,6 @@
 .image-window {
     width: 100%;
-    height: 500px;
+    height: 100px;
     flex-grow: 1;
 }
 
@@ -14,4 +14,61 @@
 .window-contents {
     width: 100%;
     height: 100%;
+}
+
+.window-title {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    transform: skewY(var(--neg-angle));
+}
+
+.window-title > h1 {
+    font-family: var(--bornStrong);
+    font-size: 100px;
+    letter-spacing: 3px;
+    color: var(--white-yellow);
+    text-shadow: var(--subtle-outline);
+}
+
+.window-title > h2 {
+    font-family: var(--thickerBlack);
+    font-size: 70px;
+    color: var(--bright-yellow);
+    text-transform: uppercase;
+    text-shadow: var(--subtle-outline);
+}
+
+@media (max-width: 1000px) {
+    .window-title > h1 {
+        font-size: 70px;
+    }
+
+    .window-title > h2 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .window-title {
+        left: 10px;
+    }
+
+    .window-title > h1 {
+        font-size: 45px;
+    }
+
+    .window-title > h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 370px) {
+    .window-title > h1 {
+        font-size: 30px;
+    }
+
+    .window-title > h2 {
+        font-size: 25px;
+    }
 }
