@@ -1,3 +1,63 @@
 #projects {
     background-color: var(--dark-gray-blue);
 }
+
+#projects .strong-title {
+    color: var(--white-blue);
+    transform: skewY(var(--neg-angle));
+}
+
+#projects .filler-block {
+    background-color: var(--pale-blue);
+}
+
+/* #projects .link-contents {
+    background-color: var(--pale-blue);
+}
+
+#projects .link-contents:hover {
+    background-color: var(--bright-blue);
+} */
+
+.project-collection {
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex-grow: 1;
+    height: 200px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab .link-contents img {
+    height: 80%;
+    top: 10px;
+}
+
+.tab .link-contents:hover img {
+    height: calc(85%);
+    /* top: 5px; */
+    /* transition: height 200ms, top 200ms, ease-out 150ms; */
+
+}
+
+.tab h2 {
+    transform: skewY(var(--neg-angle));
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    font-family: var(--thickerBlack);
+    font-size: 33px;
+    color: var(--white-blue);
+    text-shadow: var(--subtle-outline);
+}
+
+.small-nav .tab {
+    height: 80px;
+}

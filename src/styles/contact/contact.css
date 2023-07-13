@@ -1,9 +1,24 @@
+#contact {
+    margin-top: 60px;
+}
+
+#contact .filler-block {
+    background-color: var(--dark-green);
+}
+
 .contact-title {
     font-family: var(--bornStrong);
     font-size: 100px;
     letter-spacing: 3px;
     color: var(--black-yellow);
     transform: skewY(var(--neg-angle));
+}
+
+.contact-header-img {
+    width: 250px;
+    position: absolute;
+    right: 12%;
+    top: -12px;
 }
 
 .contact-body {
@@ -21,13 +36,13 @@
 .contact-list {
     height: 100%;
     flex-grow: 1;
-    background-color: var(--main-blue);
+    background-color: var(--main-green);
 }
 
 .contact-form {
     height: 100%;
     flex-grow: 1.5;
-    background-color: var(--bright-blue);
+    background-color: var(--bright-green);
     padding: 30px 20px;
 }
 

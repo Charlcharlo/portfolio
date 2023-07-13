@@ -8,7 +8,7 @@ export default function GrayDivider(props) {
     const width = block.offsetWidth;
     const height = calcOffset(width);
     setCalculatedHeight({
-      height: `${height}px`,
+      height: `${height + 40}px`,
     });
   }, [props.id]);
   return (

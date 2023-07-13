@@ -28,7 +28,6 @@ export default function DoubleVertical(props) {
     setMask(mask);
     if (props.sibling) {
       const offset = offsetSiblings(props.index, width);
-      console.log(offset);
       setOffset(offset);
     } else {
       const offset = calcOffset(width);

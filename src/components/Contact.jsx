@@ -25,8 +25,12 @@ export default function Contact() {
         </BottomOnly>
       </div>
       <h1 className="contact-title" style={mainOffset}>
-        Drop me a line
+        Get In Touch
       </h1>
+      <img
+        className="contact-header-img"
+        src={`${window.location.origin}/images/Tins.png`}
+      />
       <div className="contact-body" style={mainOffset}>
         <DoubleVertical id="contact-main">
           <div className="contact-contents row-between">
