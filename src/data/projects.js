@@ -1,29 +1,29 @@
 export const projectsTop = [
+    // {
+    //     name: "This Site",
+    //     img: "strelitzia.png",
+    // },
     {
-        name: "This Site",
-        img: "strelitzia.png",
-    },
-    {
-        name: "Blog Text Editor",
+        name: "Blog Editor",
         img: "",
     },
     {
-        name: "FreeSlarZA Company Website",
+        name: "FreeSolarZA",
         img: "freesolarlogo.png"
     }
 ]
 
 export const projectsBottom = [
     {
-        name: "A Very Simple Pokedex",
+        name: "Simple Pokedex",
         img: "Pokeball.png",
     },
     {
-        name: "Roll For Shoes Character Generator",
+        name: "Roll For Shoes",
         img: "RollShoe.png",
     },
-    {
-        name: "App Brewery Bootcamp Projects",
-        img: "AppBrewery.png"
-    }
+    // {
+    //     name: "App Brewery Bootcamp Projects",
+    //     img: "AppBrewery.png"
+    // }
 ]

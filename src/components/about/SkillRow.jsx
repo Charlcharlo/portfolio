@@ -6,7 +6,7 @@ export default function SkillRow({ data }) {
   }
   console.log(data);
   return (
-    <div className="skill-row row-start">
+    <div className="skill-row row-between">
       <div className="skills blue">
         <div className="skills-division-title">Fluent</div>
         <div className="row-start">{data.fluent.map(renderSkills)}</div>

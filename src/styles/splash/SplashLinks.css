@@ -26,6 +26,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    cursor: pointer;
 }
 
 .link-contents:hover {
@@ -48,7 +49,7 @@
     color: var(--white-blue);
     text-shadow: var(--subtle-outline);
     font-family: var(--bornStrong);
-    font-size: 3rem;
+    font-size: var(--h2);
     letter-spacing: 2px;
     transform: skewY(var(--neg-angle));
 }
@@ -113,9 +114,7 @@
     .wipe-button {
         width: 100%;
     }
-}
 
-@media (max-width: 800px) {
     .wipe-button {
         height: 100px;
     }

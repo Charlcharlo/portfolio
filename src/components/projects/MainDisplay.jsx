@@ -1,28 +1,42 @@
-import ProjectButtons from "./ProjectButtons";
+import { projectsBottom, projectsTop } from "../../data/projects";
+import "../../styles/splash/SplashLinks.css";
+import ProjectButton from "./ProjectButton";
 
-export default function MainDisplay() {
+export default function MainDisplay(props) {
+  function mapTop(link, i) {
+    return (
+      <ProjectButton
+        key={i}
+        data={link}
+        index={i}
+        id={`top-tab-${i}`}
+        handleClick={() => props.chooseItem(i)}
+      />
+    );
+  }
+
+  function mapBottom(link, i) {
+    return (
+      <ProjectButton
+        key={i}
+        data={link}
+        index={i}
+        id={`bottom-tab-${i}`}
+        handleClick={() => props.chooseItem(i + 2)}
+      />
+    );
+  }
+
   return (
-    // <div className="project-collection">
-    //   <div className="row-between">
-    //     <button className="tab">
-    //       <img src={`${window.location.origin}/images/Pokeball.png`} />
-    //       <h2>A Very Simple Pokedex</h2>
-    //     </button>
-    //     <button className="tab">
-    //       <img src={`${window.location.origin}/images/RollShoe.png`} />
-    //       <h2>Roll for Shoes Character Creator</h2>
-    //     </button>
-    //     <button className="tab">
-    //       <img src={`${window.location.origin}/images/AppBrewery.png`} />
-    //       <h2>App Brewery Bootcamp Projects</h2>
-    //     </button>
-    //   </div>
-    //   <div className="row-between">
-    //     <button className="tab"></button>
-    //     <button className="tab"></button>
-    //     <button className="tab"></button>
-    //   </div>
-    // </div>
-    <ProjectButtons />
+    <div className="project-collection">
+      <div className="row-between section-buttons">
+        {projectsTop.map(mapTop)}
+      </div>
+      <div className="row-between section-buttons">
+        {projectsBottom.map(mapBottom)}
+      </div>
+    </div>
   );
 }
+
+MainDisplay.propTypes;

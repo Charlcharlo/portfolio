@@ -24,13 +24,13 @@ export default function Contact() {
           </div>
         </BottomOnly>
       </div>
-      <h1 className="contact-title" style={mainOffset}>
-        Get In Touch
-      </h1>
       <img
         className="contact-header-img"
         src={`${window.location.origin}/images/Tins.png`}
       />
+      <h1 className="contact-title" style={mainOffset}>
+        Get In Touch
+      </h1>
       <div className="contact-body" style={mainOffset}>
         <DoubleVertical id="contact-main">
           <div className="contact-contents row-between">

@@ -11,6 +11,7 @@ html {
 
 body {
     background-color: var(--white-blue);
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -24,12 +25,19 @@ a {
     --thickerBlack: thicker-black;
     --playHeavy: play-heavy;
 
+    --h1: 100px;
+    --h2: 50px;
+    --h3: 35px;
+
     --angle: 0.0261799rad;
     --neg-angle: calc(var(--angle) * -1);
 
     --gap: 10px;
 
+    --dark-shadow: 0 0 4px var(--black-blue);
+
     --subtle-outline: -1px -1px 1px var(--black-red), 1px 1px 1px var(--black-red);
+    --subtle-outline-white: -1px -1px 1px var(--white-blue), 1px 1px 1px var(--white-blue);
     
     --main-blue: #4f74fa;
     --main-yellow: #dab141;
@@ -40,9 +48,19 @@ a {
     --bright-yellow: #f3c547;
     --bright-red: #dd5577;
     --bright-green: #51B560;
+
+    --med-blue: #354eaa;
     
-    --dark-blue: #2e4081;
+    --dark-blue: #2d3c72;
+    --dark-yellow: #c2961c;
+    --dark-red: #c04d6a;
     --dark-green: #2b5d33;
+
+    --darker-blue: #1f294d;
+
+    --light-blue: #7592f1;
+    --light-green: #6af07e;
+
 
     --pale-blue: #c1cfff;
     --pale-yellow: #ecd79c;
@@ -124,10 +142,10 @@ a {
 /* Page Layout */
 
 .full-page {
+    width: 100vw;
     max-width: 100vw;
-    height: 700px;
     min-height: 100vh;
-    padding: 20px 10%;
+    padding: 20px 5%;
 }
 
 /* Offsets */
@@ -161,7 +179,7 @@ a {
 }
 
 .divider {
-    background-color: var(--dark-gray-blue);
+    background-color: var(--dark-blue);
     width: 100%;
     clip-path: polygon(0 calc(100% - 42px), 100% 0, 100% 100%, 0 100%);
     top: 2px;
@@ -184,7 +202,7 @@ a {
 
 .strong-title {
     font-family: var(--bornStrong);
-    font-size: 80px;
+    font-size: var(--h1);
     letter-spacing: 3px;
     color: var(--white-yellow);
     text-shadow: var(--subtle-outline);
@@ -192,13 +210,13 @@ a {
 
 .section-title {
     font-family: var(--bornStrong);
-    font-size: 80px;
+    font-size: var(--h1);
     color: var(--black-yellow);
 }
 
 .section-subtitle {
     font-family: var(--thickerBlack);
-    font-size: 50px;
+    font-size: var(--h2);
     text-transform: uppercase;
     color: var(--black-yellow);
 }
@@ -211,12 +229,33 @@ a {
     margin-bottom: 20px;
 }
 
+@media (max-width: 1000px) {
+    :root {
+        --h1: 55px;
+        --h2: 35px;
+        --h3: 30px;
+    }
+}
+
 @media (max-width: 500px) {
+    :root {
+        --h1: 40px;
+        --h2: 30px;
+        --h3: 25px;
+    }
+
     .full-page {
         padding: 20px;
     }
 
     .offset-border {
         padding: 3px 5px 5px 3px;
+    }
+}
+
+@media (max-width: 350px) {
+    :root {
+        --h1: 35px;
+        --h2: 25px;
     }
 }

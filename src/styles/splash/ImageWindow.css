@@ -25,7 +25,7 @@
 
 .window-title > h1 {
     font-family: var(--bornStrong);
-    font-size: 100px;
+    font-size: var(--h1);
     letter-spacing: 3px;
     color: var(--white-yellow);
     text-shadow: var(--subtle-outline);
@@ -40,8 +40,8 @@
 }
 
 @media (max-width: 1000px) {
-    .window-title > h1 {
-        font-size: 70px;
+    .window-title {
+        top: 20px;
     }
 
     .window-title > h2 {
@@ -54,20 +54,12 @@
         left: 10px;
     }
 
-    .window-title > h1 {
-        font-size: 45px;
-    }
-
     .window-title > h2 {
         font-size: 35px;
     }
 }
 
 @media (max-width: 370px) {
-    .window-title > h1 {
-        font-size: 30px;
-    }
-
     .window-title > h2 {
         font-size: 25px;
     }

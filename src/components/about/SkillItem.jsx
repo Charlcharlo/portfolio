@@ -22,7 +22,7 @@ export default function SkillItem({ data }) {
   }
 
   const detailsStyle = {
-    visibility: showDetails ? "visible" : "hidden",
+    // visibility: showDetails ? "visible" : "hidden",
     top: detailsY,
     left: detailsX,
   };

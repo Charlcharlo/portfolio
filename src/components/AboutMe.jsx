@@ -1,13 +1,17 @@
 import "../styles/about/about.css";
 import StackContainer from "./about/StackContainer";
+import { useFlex } from "./context/FlexContext";
 
 export default function AboutMe() {
+  const flex = useFlex();
   return (
     <div className="full-page" id="about-me">
-      <img
-        className="about-img"
-        src={`${window.location.origin}/images/Charl-Peace.png`}
-      />
+      {!flex && (
+        <img
+          className="about-img"
+          src={`${window.location.origin}/images/charl-peace.png`}
+        />
+      )}
       <div className="col-start about-details">
         <h1 className="section-title">About Me</h1>
         <p className="paragraph">
