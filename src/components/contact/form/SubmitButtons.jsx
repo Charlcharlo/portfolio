@@ -5,13 +5,13 @@ import FormButton from "./FormButton";
 export default function SubmitButtons() {
   return (
     <div className="row-end">
-      <FormButton id="submit-button" index={0}>
+      <FormButton id="submit-button" index={0} type="submit">
         <div className="row-between button-contents submit">
           <p>Submit</p>
           <Send />
         </div>
       </FormButton>
-      <FormButton id="clear-button" index={1}>
+      <FormButton id="clear-button" index={1} type="reset">
         <div className="row-between button-contents clear">
           <p>Clear</p>
           <Cancel />

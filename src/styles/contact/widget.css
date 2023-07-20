@@ -1,0 +1,43 @@
+.email-widget {
+    width: 200px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
+.widget-contents {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white-blue);
+    padding: 10px;
+    color: var(--main-yellow);
+    transition: 300ms;
+}
+
+.widget-contents.done {
+    color: var(--main-green);
+    background-color: var(--pale-green);
+}
+
+.widget-contents p {
+    font-size: 25px;
+    font-family: var(--thickerBlack);
+    color: var(--black-yellow);
+}
+
+.animated-loop {
+    animation-name: rotate;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

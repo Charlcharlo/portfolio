@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { calcOffset } from "../functions/trig";
 import "../styles/contact/contact.css";
+import EmailProgress from "./contact/EmailProgress";
 import Form from "./contact/Form";
 import List from "./contact/List";
 import DividerBottom from "./layout/DividerBottom";
@@ -9,12 +10,18 @@ import DoubleVertical from "./offsets/DoubleVertical";
 
 export default function Contact() {
   const [mainOffset, setMainOffset] = useState({});
+  const [widgetIn, setWidgetIn] = useState(false);
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     const refBlock = document.getElementById("contact-top");
     const mainOffset = calcOffset(refBlock.offsetWidth);
     setMainOffset({ bottom: `calc(${mainOffset}px - 20px)` });
   }, []);
+
+  function closeWidget() {
+    setWidgetIn(false);
+  }
 
   return (
     <div className="full-page col-start" id="contact">
@@ -30,9 +37,10 @@ export default function Contact() {
         <DoubleVertical id="contact-main">
           <div className="contact-contents row-between">
             <List />
-            <Form />
+            <Form setDone={setDone} setWidgetIn={setWidgetIn} />
           </div>
         </DoubleVertical>
+        {widgetIn && <EmailProgress done={done} close={closeWidget} />}
       </div>
       <DividerBottom />
     </div>

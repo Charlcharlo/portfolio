@@ -37,7 +37,6 @@
 
 .contact-list {
     height: 100%;
-    /* flex-grow: 1; */
     background-color: var(--main-green);
     transform: skewY(var(--neg-angle));
     padding-left: 10px;
@@ -138,7 +137,7 @@ textarea.contact-input {
 }
 
 .button-contents.clear {
-    background-color: var(--gray-green);
+    background-color: var(--bright-green);
 }
 
 .button-contents:hover {
