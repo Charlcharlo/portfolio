@@ -1,14 +1,12 @@
 import { useState } from "react";
-import Languages from "../Icons/Languages";
+import Languages from "../Icons/routers/Languages";
 import SkillDetails from "./SkillDetails";
 
 export default function SkillItem({ data }) {
   const id = `details-${data.icon}`;
 
-  const [showDetails, setShowDetails] = useState(false);
   const [detailsX, setDetailsX] = useState(0);
   const [detailsY, setDetailsY] = useState(0);
-  // const [displayAbove, setDisplayAbove] = useState(false);
 
   function handleMouseMove(e) {
     const docHeight = window.innerHeight;
@@ -22,21 +20,13 @@ export default function SkillItem({ data }) {
   }
 
   const detailsStyle = {
-    // visibility: showDetails ? "visible" : "hidden",
     top: detailsY,
     left: detailsX,
   };
 
   return (
     <div>
-      <div
-        className="skill-icon"
-        onMouseEnter={() => {
-          setShowDetails(true);
-        }}
-        onMouseMoveCapture={handleMouseMove}
-        onMouseLeave={() => setShowDetails(false)}
-      >
+      <div className="skill-icon" onMouseMoveCapture={handleMouseMove}>
         <Languages name={data.icon} />
       </div>
       <SkillDetails data={data} positioning={detailsStyle} id={id} />

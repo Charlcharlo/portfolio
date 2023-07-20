@@ -1,4 +1,4 @@
-import Languages from "../Icons/Languages";
+import Languages from "../Icons/routers/Languages";
 import BottomOnly from "../offsets/BottomOnly";
 
 export default function SkillDetails(props) {

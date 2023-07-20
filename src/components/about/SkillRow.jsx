@@ -4,7 +4,7 @@ export default function SkillRow({ data }) {
   function renderSkills(data) {
     return <SkillItem data={data} />;
   }
-  console.log(data);
+
   return (
     <div className="skill-row row-between">
       <div className="skills blue">

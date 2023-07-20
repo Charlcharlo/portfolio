@@ -15,3 +15,21 @@ export const splashLinks = [
         img: "Tins.png"
     }
 ]
+
+export const contactLinks = [
+    {
+        name: "Charlcharlo@gmail.com",
+        link: "mailto:charlcharlo@gmail.com",
+        icon: "mail"
+    },
+    {
+        name: 'LinkedIn',
+        link: "/",
+        icon: "linkedIn"
+    },
+    {
+        name: "GitHub",
+        link: "/",
+        icon: "gitHub"
+    },
+];

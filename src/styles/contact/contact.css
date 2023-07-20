@@ -1,5 +1,6 @@
 #contact {
     margin-top: 60px;
+    height: 100vh;
 }
 
 #contact .filler-block {
@@ -36,9 +37,32 @@
 
 .contact-list {
     height: 100%;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     background-color: var(--main-green);
+    transform: skewY(var(--neg-angle));
+    padding-left: 10px;
+    padding-right: 20px;
 }
+
+
+.contact-link {
+    color: var(--white-blue);
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+
+.contact-link:hover {
+    color: var(--light-green);
+}
+
+
+.contact-link h2 {
+    font-family: var(--thickerBlack);
+    font-size: 2rem;
+}
+
 
 .contact-form {
     height: 100%;
@@ -64,12 +88,72 @@
 .contact-input {
     height: 100%;
     width: 100%;
-    background-color: var(--white-yellow);
+    background-color: var(--white-blue);
     transform: skewY(var(--neg-angle));
-    font-size: 1rem;
-    padding: 4px;
-    /* border: 4px solid var(--black-yellow); */
+    font-size: 1.4rem;
+    font-family: var(--body-font);
+    padding: 4px 10px;
     border: none;
+}
+
+.contact-input:focus {
+    background-color: var(--white-yellow);
+}
+
+textarea.contact-input {
+    padding: 20px 10px;
+}
+
+.message-body {
+    flex-grow: 1;
+}
+
+.message-body .input-wrapper {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.button-wrapper {
+    width: 200px;
+}
+
+.form-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.button-contents {
+    width: 100%;
+    height: 100%;
+    transition: 200ms;
+    align-items: flex-end;
+    padding: 5px 10px;
+    transform: skewY(var(--neg-angle));
+    color: var(--white-yellow);
+}
+
+.button-contents.submit {
+    background-color: var(--dark-green);
+}
+
+.button-contents.clear {
+    background-color: var(--gray-green);
+}
+
+.button-contents:hover {
+    background-color: var(--light-green);
+    color: var(--black-green);
+}
+
+.button-contents .vector-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.button-contents p {
+    font-family: var(--thickerBlack);
+    font-size: 25px;
 }
 
 @media (max-width: 500px) {

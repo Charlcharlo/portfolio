@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { calcOffset } from "../functions/trig";
 import "../styles/contact/contact.css";
-import TextInput from "./contact/form/TextInput";
-import BottomOnly from "./offsets/BottomOnly";
+import Form from "./contact/Form";
+import List from "./contact/List";
+import DividerBottom from "./layout/DividerBottom";
+import DividerTop from "./layout/DividerTop";
 import DoubleVertical from "./offsets/DoubleVertical";
-import TopOnly from "./offsets/TopOnly";
 
 export default function Contact() {
   const [mainOffset, setMainOffset] = useState({});
@@ -17,13 +18,7 @@ export default function Contact() {
 
   return (
     <div className="full-page col-start" id="contact">
-      <div className="single-offset">
-        <BottomOnly id="contact-top">
-          <div className="row-between">
-            <div className="filler-block" />
-          </div>
-        </BottomOnly>
-      </div>
+      <DividerTop />
       <img
         className="contact-header-img"
         src={`${window.location.origin}/images/Tins.png`}
@@ -34,21 +29,12 @@ export default function Contact() {
       <div className="contact-body" style={mainOffset}>
         <DoubleVertical id="contact-main">
           <div className="contact-contents row-between">
-            <div className="contact-list"></div>
-            <div className="contact-form">
-              <TextInput id="your-name" />
-              <TextInput id="your-email" />
-            </div>
+            <List />
+            <Form />
           </div>
         </DoubleVertical>
       </div>
-      <div className="single-offset">
-        <TopOnly id="contact-top">
-          <div className="row-between">
-            <div className="filler-block" />
-          </div>
-        </TopOnly>
-      </div>
+      <DividerBottom />
     </div>
   );
 }
