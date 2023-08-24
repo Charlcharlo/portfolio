@@ -1,0 +1,48 @@
+.cham-scroll {
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.cham-scroll::-webkit-scrollbar {
+  background: transparent;
+  transition: 300ms;
+}
+
+.cham-scroll::-webkit-scrollbar-thumb {
+  border: 2px solid var(--black-yellow);
+  transition: 300ms;
+}
+
+.cham-scroll.yellow::-webkit-scrollbar-thumb {
+  background: var(--main-yellow);
+}
+
+.cham-scroll.red::-webkit-scrollbar-thumb {
+  background: var(--main-red);
+}
+
+.cham-scroll.blue::-webkit-scrollbar-thumb {
+  background: var(--main-blue);
+}
+
+.cham-scroll.green::-webkit-scrollbar-thumb {
+  background: var(--main-green);
+}
+
+.cham-scroll.yellow::-webkit-scrollbar-thumb:hover {
+  background: var(--bright-yellow);
+}
+
+.cham-scroll.red::-webkit-scrollbar-thumb:hover {
+  background: var(--bright-red);
+}
+
+.cham-scroll.blue::-webkit-scrollbar-thumb:hover {
+  background: var(--bright-blue);
+}
+
+.cham-scroll.green::-webkit-scrollbar-thumb:hover {
+  background: var(--bright-green);
+}

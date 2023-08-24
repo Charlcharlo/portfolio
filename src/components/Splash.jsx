@@ -1,15 +1,15 @@
-import CVLink from "./splash/CVLink";
+import DividerBottom from "./layout/DividerBottom";
+import DividerTop from "./layout/DividerTop";
 import ImageWindow from "./splash/ImageWindow";
-import MediaLinks from "./splash/MediaLinks";
 import SplashLinks from "./splash/SplashLinks";
 
 export default function Splash() {
   return (
     <div className="full-page col-start" id="splash">
-      <MediaLinks />
+      <DividerTop id="splash-top" />
       <ImageWindow />
       <SplashLinks />
-      <CVLink />
+      <DividerBottom id="splash-bottom" />
     </div>
   );
 }

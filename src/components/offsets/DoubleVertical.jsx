@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { calcOffset } from "../../functions/trig";
-import { useFlex } from "../context/FlexContext";
+import { useFlex, useWidth } from "../context/FlexContext";
 
 export default function DoubleVertical(props) {
   const [mask, setMask] = useState({});
   const [offset, setOffset] = useState({});
   const flex = useFlex();
+  const width = useWidth();
 
   function calcMask(width) {
     const offset = calcOffset(width);
@@ -31,13 +32,19 @@ export default function DoubleVertical(props) {
       setOffset(offset);
     } else {
       const offset = calcOffset(width);
-      setOffset({
-        marginTop: `calc(10px - ${offset}px)`,
-        height: `calc(100% + ${offset}px - 10px)`,
-      });
+      setOffset(
+        flex
+          ? {
+              marginTop: `calc(10px - ${offset}px)`,
+            }
+          : {
+              marginTop: `calc(10px - ${offset}px)`,
+              height: `calc(100% + ${offset}px - 10px)`,
+            }
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props, flex]);
+  }, [props, flex, width]);
 
   return (
     <div

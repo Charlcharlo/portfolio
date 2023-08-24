@@ -72,7 +72,7 @@ export const techStack = [
         ]
     },
     {
-        title: "Tools and Middleware",
+        title: "Tools",
         fluent: [
             {
                 name: "VS Code",

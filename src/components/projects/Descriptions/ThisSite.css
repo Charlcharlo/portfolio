@@ -1,0 +1,32 @@
+.portfolio-body {
+    background-color: var(--white-blue);
+    padding: 30px 20px 50px;
+}
+
+.portfolio-body .strong-title {
+    font-size: var(--h1-sub);
+    transform: skewY(var(--neg-angle));
+    margin-bottom: 20px;
+}
+
+.portfolio-body .filler-block {
+    background-color: var(--main-yellow) !important;
+}
+
+.portfolio-body .button-wrapper {
+    margin-bottom: 20px;
+    width: 200px !important;
+}
+
+.portfolio-body .button-contents {
+    background-color: var(--main-blue);
+}
+
+.portfolio-body .button-contents:hover {
+    background-color: var(--bright-blue);
+    color: var(--white-yellow);
+}
+
+.portfolio-body .section-subtitle {
+    margin-top: 20px;
+}

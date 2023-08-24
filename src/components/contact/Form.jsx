@@ -24,6 +24,7 @@ export default function Form(props) {
           e.target.reset();
           props.setDone(true);
           console.log(result.text);
+          setTimeout(props.close, 3000);
         },
         (error) => {
           console.log(error.text);
@@ -34,9 +35,9 @@ export default function Form(props) {
   return (
     <>
       <form className="col-start contact-form" ref={form} onSubmit={sendEmail}>
-        <TextInput id="your-name" />
-        <TextInput id="your-email" />
-        <TextArea id="message-body" />
+        <TextInput name="your-name" label="Your Name" />
+        <TextInput name="your-email" label="Your Email Adress" />
+        <TextArea name="message-body" label="Message Body" />
         <SubmitButtons />
       </form>
     </>

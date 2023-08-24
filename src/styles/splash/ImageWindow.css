@@ -5,6 +5,7 @@
 }
 
 .image-window img {
+    position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -17,13 +18,12 @@
 }
 
 .window-title {
-    position: absolute;
-    left: 20px;
-    top: 40px;
+    height: 100%;
+    padding: 40px 20px;
     transform: skewY(var(--neg-angle));
 }
 
-.window-title > h1 {
+.window-title h1 {
     font-family: var(--bornStrong);
     font-size: var(--h1);
     letter-spacing: 3px;
@@ -31,19 +31,29 @@
     text-shadow: var(--subtle-outline);
 }
 
-.window-title > h2 {
+.window-title h2 {
     font-family: var(--thickerBlack);
-    font-size: 70px;
+    font-size: var(--h1-sub);
     color: var(--bright-yellow);
     text-transform: uppercase;
     text-shadow: var(--subtle-outline);
 }
 
-@media (max-width: 1000px) {
-    .window-title {
-        top: 20px;
-    }
+.invisibutton {
+    color: rgba(255, 255, 255, 0.6);
+    transition: 300ms;
+}
 
+.invisibutton:hover {
+    color: var(--white-yellow);
+}
+
+.invisibutton svg {
+    height: 60px;
+    width: 60px;
+}
+
+@media (max-width: 1000px) {
     .window-title > h2 {
         font-size: 50px;
     }
@@ -51,16 +61,21 @@
 
 @media (max-width: 500px) {
     .window-title {
-        left: 10px;
+        padding: 20px 10px;
     }
 
-    .window-title > h2 {
+    .window-title h2 {
         font-size: 35px;
+    }
+
+    .invisibutton svg {
+        height: 40px;
+        width: 40px;
     }
 }
 
 @media (max-width: 370px) {
-    .window-title > h2 {
+    .window-title h2 {
         font-size: 25px;
     }
 }

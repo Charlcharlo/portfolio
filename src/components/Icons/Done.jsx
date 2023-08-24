@@ -1,6 +1,7 @@
 export default function Done() {
   return (
     <svg
+      className="vector-icon"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

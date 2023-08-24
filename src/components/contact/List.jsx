@@ -13,9 +13,8 @@ export default function List() {
     });
   }, []);
 
-  function renderLinks(link) {
-    console.log(link);
-    return <ContactLink data={link} />;
+  function renderLinks(link, i) {
+    return <ContactLink data={link} key={i} />;
   }
 
   return (

@@ -7,7 +7,7 @@ export default function SubmitButtons() {
     <div className="row-end">
       <FormButton id="submit-button" index={0} type="submit">
         <div className="row-between button-contents submit">
-          <p>Submit</p>
+          <p>Send</p>
           <Send />
         </div>
       </FormButton>

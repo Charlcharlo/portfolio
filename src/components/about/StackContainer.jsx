@@ -21,7 +21,7 @@ export default function StackContainer() {
           />
         )}
       </div>
-      <div className="stack-container">
+      <div className="stack-container" id="stack-container">
         <div>{techStack.map(renderRows)}</div>
         <BottomOnly id="tech-stack">
           <div className="stack-filler" />

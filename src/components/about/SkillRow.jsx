@@ -1,12 +1,21 @@
 import SkillItem from "./SkillItem";
 
-export default function SkillRow({ data }) {
-  function renderSkills(data) {
-    return <SkillItem data={data} />;
+export default function SkillRow({ data, show }) {
+  const hidden = {
+    visibility: "hidden",
+    position: "absolute",
+  };
+
+  function renderSkills(data, i) {
+    return <SkillItem data={data} key={i} />;
   }
 
   return (
-    <div className="skill-row row-between">
+    <div
+      className="skill-row row-between"
+      style={!show ? hidden : {}}
+      id={`${data.title}-skills`}
+    >
       <div className="skills blue">
         <div className="skills-division-title">Fluent</div>
         <div className="row-start">{data.fluent.map(renderSkills)}</div>

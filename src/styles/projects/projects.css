@@ -9,15 +9,26 @@
 
 .project-collection {
     margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.project-collection + .single-offset {
+    bottom: 50px;
+}
+
+.projects-main {
+    flex-wrap: wrap;
 }
 
 .tab {
-    width: 50%;
+    width: calc(50% - 5px);
+    margin-bottom: 20px !important;
     height: 250px;
     background-color: transparent;
     border: none;
     padding: 0;
     margin: 0;
+    animation: fade-in 400ms linear;
 }
 
 .tab .link-contents {
@@ -59,6 +70,7 @@
 
 .tab.small {
     height: 80px;
+    margin-bottom: 0 !important;
 }
 
 .tab.small .link-contents {
@@ -74,11 +86,11 @@
     height: 100%;
 }
 
-.tab.small:hover img {
+.tab.small .link-contents:hover img {
     height: 95%;
 }
 
-.tab.small:hover h3 {
+.tab.small .link-contents:hover h3 {
     color: var(--black-yellow);
     text-shadow: var(--subtle-outline-white);
 }
@@ -88,6 +100,7 @@
     font-size: 25px;
     color: var(--white-blue);
     text-shadow: var(--subtle-outline);
+    letter-spacing: 1px;
 }
 
 
@@ -103,35 +116,74 @@
     flex-grow: 1;
 }
 
-.project-menu-button-container {
-    height: 80px;
-    width: 80px;
-}
-
 .project-menu-button {
-    height: 100%;
-    width: 100%;
-    padding: 10px;
+    background-color: transparent;
     border: none;
-    background-color: var(--dark-blue);
-    color: var(--pale-blue);
+    color: var(--dark-blue);
     transition: 200ms;
 }
 
 .project-menu-button:hover {
-    background-color: var(--bright-yellow);
-    color: var(--black-yellow);
+    color: var(--main-yellow);
+}
+
+.project-menu-title {
+    font-size: var(--h2);
+    font-family: var(--bornStrong);
+    text-shadow: none;
+}
+
+.project-menu-button:hover .project-menu-title {
+    color: var(--bright-blue);
 }
 
 .project-menu-icon {
-    height: 100%;
-    width: 100%;
-    transform: skewY(var(--neg-angle));
+    height: 60px;
+    width: 60px;
+}
+
+@media (max-width: 1000px) {
+    .project-collection + .single-offset {
+        bottom: 30px;
+    }
+
+    .tab {
+        margin-bottom: 10px !important;
+    }
+    
+    .tab.small img {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .small-nav {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tab {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 0 !important;
+    }
 }
 
 @media (max-width: 500px) {
     .tab {
         width: 100%;
-        height: 150px;
+        height: 100px;
+        margin-bottom: 0 !important;
+    }
+
+    .tab.small {
+        height: 50px;
+    }
+
+    .project-menu-button svg {
+        height: 40px;
+        width: 40px;
     }
 }

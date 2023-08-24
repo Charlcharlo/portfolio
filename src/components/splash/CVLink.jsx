@@ -3,7 +3,7 @@ import DividerBottom from "../layout/DividerBottom";
 
 export default function CVLink() {
   return (
-    <DividerBottom>
+    <DividerBottom id="splash-bottom">
       <a className="icon-link row-center" href="">
         <p>Download CV </p>
         <Download />

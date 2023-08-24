@@ -26,6 +26,11 @@
     color: var(--black-yellow);
 }
 
+.widget-contents .vector-icon {
+    height: 40px;
+    width: 40px;
+}
+
 .animated-loop {
     animation-name: rotate;
     animation-duration: 1500ms;

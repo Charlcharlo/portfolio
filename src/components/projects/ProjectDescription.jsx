@@ -1,24 +1,29 @@
 import "../../styles/projects/description.css";
-import DoubleVertical from "../offsets/DoubleVertical";
+import DividerBottom from "../layout/DividerBottom";
+import FreeSolar from "./Descriptions/FreeSolar";
+import Pokedex from "./Descriptions/Pokedex";
+import RollForShoes from "./Descriptions/RollForShoes";
+import ThisSite from "./Descriptions/ThisSite";
 
 export default function ProjectDescription(props) {
   return (
     <div
-      className="project-description"
+      className="description-wrapper"
       id="project-description"
       style={props.offset}
     >
-      <DoubleVertical id="description-offset">
-        <div className={`description-body`}>
-          <h2>Heading</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
-            excepturi quas, eligendi voluptate hic temporibus a inventore? Esse,
-            quis, fugiat sequi assumenda id neque molestias illum eligendi
-            accusantium quas numquam?
-          </p>
-        </div>
-      </DoubleVertical>
+      {props.id === "pokedex" ? (
+        <Pokedex />
+      ) : props.id === "roll4shoes" ? (
+        <RollForShoes />
+      ) : props.id === "freeSolar" ? (
+        <FreeSolar />
+      ) : props.id === "portfolio" ? (
+        <ThisSite />
+      ) : (
+        <div className="description-body" />
+      )}
+      <DividerBottom id="projects-bottom" />
     </div>
   );
 }

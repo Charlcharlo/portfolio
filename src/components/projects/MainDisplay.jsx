@@ -1,9 +1,10 @@
-import { projectsBottom, projectsTop } from "../../data/projects";
+import { projects } from "../../data/projects";
 import "../../styles/splash/SplashLinks.css";
+import DividerBottom from "../layout/DividerBottom";
 import ProjectButton from "./ProjectButton";
 
 export default function MainDisplay(props) {
-  function mapTop(link, i) {
+  function renderTabs(link, i) {
     return (
       <ProjectButton
         key={i}
@@ -15,27 +16,15 @@ export default function MainDisplay(props) {
     );
   }
 
-  function mapBottom(link, i) {
-    return (
-      <ProjectButton
-        key={i}
-        data={link}
-        index={i}
-        id={`bottom-tab-${i}`}
-        handleClick={() => props.chooseItem(i + 2)}
-      />
-    );
-  }
-
   return (
-    <div className="project-collection">
-      <div className="row-between section-buttons">
-        {projectsTop.map(mapTop)}
+    <>
+      <div className="project-collection">
+        <div className="row-between projects-main">
+          {projects.map(renderTabs)}
+        </div>
       </div>
-      <div className="row-between section-buttons">
-        {projectsBottom.map(mapBottom)}
-      </div>
-    </div>
+      <DividerBottom id="projects-bottom" />
+    </>
   );
 }
 

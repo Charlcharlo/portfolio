@@ -1,10 +1,16 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const FlexContext = createContext();
+const WidthContext = createContext();
 
 // eslint-disable-next-line react-refresh/only-export-components
 export function useFlex() {
   return useContext(FlexContext);
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function useWidth() {
+  return useContext(WidthContext);
 }
 
 export default function FlexProvider({ children }) {
@@ -19,8 +25,6 @@ export default function FlexProvider({ children }) {
     });
   }, []);
 
-  //Check width against 600px (for mobile L)
-
   useEffect(() => {
     updateFlex(width);
   }, [width]);
@@ -33,7 +37,11 @@ export default function FlexProvider({ children }) {
     }
   }
 
-  return <FlexContext.Provider value={flex}>{children}</FlexContext.Provider>;
+  return (
+    <FlexContext.Provider value={flex}>
+      <WidthContext.Provider value={width}>{children}</WidthContext.Provider>
+    </FlexContext.Provider>
+  );
 }
 
 FlexProvider.propTypes;

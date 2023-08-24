@@ -4,11 +4,11 @@ export default function TextInput(props) {
   return (
     <div>
       <label className="input-label" htmlFor={props.name}>
-        Lable
+        {props.label}
       </label>
       <div className="input-wrapper">
-        <DoubleVertical id={props.id} noOffset={true}>
-          <input className="contact-input" />
+        <DoubleVertical id={props.name} noOffset={true}>
+          <input className="contact-input" name={props.name} />
         </DoubleVertical>
       </div>
     </div>

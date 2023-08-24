@@ -1,171 +1,239 @@
 #about-me {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+#about-me .paragraph:last-of-type {
+  margin: 0;
 }
 
 .flex-title {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .about-details {
-    height: 100%;
+  height: 100%;
 }
 
 .about-img {
-    float: right;
-    height: calc(100vh - 20px);
-    width: 33%;
-    min-height: 700px;
-    object-fit: contain;
-    margin-left: 10px;
+  float: right;
+  height: calc(100vh - 20px);
+  width: 33%;
+  min-height: 700px;
+  object-fit: contain;
+  margin-left: 10px;
 }
 
 .flexed-about-img {
-    width: 200px;
-    height: 150px;
-    top: 2px;
-    object-fit: cover;
-    object-position: top;
+  width: 200px;
+  height: 150px;
+  top: 2px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.expand-button {
+  text-align: left;
+  font-family: var(--body-font);
+  font-size: 1.4rem;
+  color: var(--main-red);
+
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.expand-button:hover {
+  color: var(--bright-red);
 }
 
 .stack-container {
-    width: 100%;
-    flex-grow: 1;
+  width: 100%;
+  flex-grow: 1;
+  transition: height 300ms;
 }
 
 .stack-container .row-between {
-    gap: 0;
-    flex-wrap: wrap;
+  gap: 0;
+  flex-wrap: wrap;
 }
 
 .stack-positioning {
-    height: 100%;
-    gap: 6px;
+  height: 100%;
+  gap: 6px;
 }
 
 .stack-row {
-    background-color: var(--white-blue);
-    flex-grow: 1;
-    border: 4px solid var(--black-yellow);
-    border-bottom: none;
-    border-right: 6px solid var(--black-yellow);
+  display: block;
+  width: 100%;
+  background-color: var(--white-blue);
+  flex-grow: 1;
+  border: 4px solid var(--black-yellow);
+  border-bottom: none;
+  border-right: 6px solid var(--black-yellow);
+}
+
+.collapse-button {
+  background-color: transparent;
+  border: none;
+  color: var(--white-red);
+}
+
+.skill-row {
+  animation: wipe-in 300ms linear;
 }
 
 .stack-title {
-    font-family: var(--thickerBlack);
-    font-size: var(--h3);
-    color: var(--white-blue);
-    background-color: var(--gray-red);
-    padding: 10px 15px;
+  font-family: var(--thickerBlack);
+  font-size: var(--h3);
+  color: var(--white-blue);
+  background-color: var(--gray-red);
+  padding: 10px 15px;
+  align-items: center;
+  border: none;
+  width: 100%;
 }
 
 .stack-filler {
-    height: 40px;
-    background-color: var(--main-red);
+  height: 40px;
+  background-color: var(--main-red);
 }
 
 .skills-division-title {
-    background-color: var(--black-yellow);
-    color: var(--white-blue);
-    font-family: var(--thickerBlack);
-    font-size: 20px;
-    padding: 10px 20px 5px;
+  background-color: var(--black-yellow);
+  color: var(--white-blue);
+  font-family: var(--thickerBlack);
+  font-size: 20px;
+  padding: 10px 20px 5px;
 }
 
 .skills {
-    width: calc(100% / 3);
-    flex-grow: 1;
-    color: var(--black-blue);
+  width: calc(100% / 3);
+  flex-grow: 1;
+  color: var(--black-blue);
 }
 
 .skills.blue {
-    background-color: var(--pale-blue);
+  background-color: var(--pale-blue);
 }
 
 .skills.green {
-    background-color: var(--pale-green);
+  background-color: var(--pale-green);
 }
 
 .skills.yellow {
-    background-color: var(--pale-yellow);
+  background-color: var(--pale-yellow);
 }
 
 .skills > .row-start {
-    padding: 5px 20px;
-    gap: 10px;
+  padding: 5px 20px;
+  gap: 10px;
 }
 
 .skills svg {
-    height: 45px;
-    width: 45px;
-    /* filter: drop-shadow(0 0 1px var(--white-blue)); */
+  height: 45px;
+  width: 45px;
+  /* filter: drop-shadow(0 0 1px var(--white-blue)); */
 }
 
 .skills svg:hover {
-    fill: var(--white-yellow);
+  fill: var(--white-yellow);
 }
 
 .skill-icon {
-    position: static;
+  position: static;
+}
+
+button.skill-icon {
+  background-color: transparent;
+  border: none;
 }
 
 .skill-icon:hover + .skill-details {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .skill-details {
-    position: fixed;
-    z-index: 10;
-    width: 500px;
-    filter: drop-shadow(0 0 10px var(--black-blue));
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 200ms;
+  position: fixed;
+  z-index: 10;
+  /* width: 500px; */
+  filter: drop-shadow(0 0 10px var(--black-blue));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms;
+}
+
+.skill-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30px;
+  margin: 0 auto;
+  max-width: calc(100vw - 20px);
+}
+
+.skill-details.modal-details {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  width: 100%;
 }
 
 .details-header {
-    background-color: var(--main-red);
-    color: var(--white-red);
-    font-family: var(--thickerBlack);
-    padding: 10px 20px 5px;
-    border-bottom: 4px solid var(--black-yellow);
+  background-color: var(--main-red);
+  color: var(--white-red);
+  font-family: var(--thickerBlack);
+  padding: 10px 20px 10px;
+  /* border-bottom: 4px solid var(--black-yellow); */
 
-    align-items: flex-end;
+  align-items: center;
+}
+
+.details-header > .row-start {
+  align-items: center;
+}
+
+.details-header .row-between,
+.details-header .row-start {
+  align-items: center;
+}
+
+.details-header .skill-icon {
+  color: var(--white-red);
 }
 
 .details-header h2 {
-    font-size: var(--h3);
-    margin-left: 10px;
+  font-size: var(--h3);
+  margin-left: 10px;
 }
 
 .details-header svg {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .details-body {
-    background-color: var(--white-red);
-    padding: 10px 20px 20px;
+  background-color: var(--white-red);
+  padding: 10px 20px 20px;
 }
 
 .details-body .paragraph {
-    margin: 0;
+  margin: 0;
 }
 
 @media (max-width: 1000px) {
-    .skills {
-        width: auto;
-    }
-
-    .skill-details {
-        top: 60px !important;
-        left: 7% !important;
-        width: 86%;
-    }
+  .skills {
+    width: auto;
+  }
 }
 
 @media (max-width: 500px) {
-    .skills {
-        width: 100%;
-    }
+  .skills {
+    width: 100%;
+  }
+
+  #about-me .paragraph {
+    font-size: 1rem;
+  }
 }

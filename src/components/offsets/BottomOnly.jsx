@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { calcOffset } from "../../functions/trig";
-import { useFlex } from "../context/FlexContext";
+import { useFlex, useWidth } from "../context/FlexContext";
 
 export default function BottomOnly(props) {
   const [mask, setMask] = useState({});
   const flex = useFlex();
+  const width = useWidth();
 
   function calcMask(width) {
     const offset = calcOffset(width);
@@ -18,7 +19,7 @@ export default function BottomOnly(props) {
     const width = block.offsetWidth;
     const mask = calcMask(width);
     setMask(mask);
-  }, [props.id, flex]);
+  }, [props.id, flex, width]);
 
   return (
     <div className="offset-border" id={props.id} style={{ ...mask }}>

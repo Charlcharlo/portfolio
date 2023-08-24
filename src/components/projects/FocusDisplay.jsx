@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
-import { projectsBottom, projectsTop } from "../../data/projects";
+import { projects } from "../../data/projects";
 import { calcOffset } from "../../functions/trig";
-import { useFlex } from "../context/FlexContext";
-import ProjectMenu from "../Icons/ProjectMenu";
+import { useFlex, useWidth } from "../context/FlexContext";
 import DoubleVertical from "../offsets/DoubleVertical";
 import ProjectDescription from "./ProjectDescription";
 
 export default function FocusDisplay(props) {
   const [offset, setOffset] = useState({});
-  const [menuOffset, setMenuOffset] = useState({});
 
   const flex = useFlex();
+  const width = useWidth();
 
-  const allProjects = [...projectsTop, ...projectsBottom];
+  useEffect(() => {
+    const block = document.getElementById("project-description");
+    const offset = calcOffset(block.offsetWidth);
+    setOffset({
+      top: `-${offset}px`,
+    });
+  }, [flex, width]);
 
   function renderNavs(item, i) {
     return (
@@ -31,32 +36,17 @@ export default function FocusDisplay(props) {
     );
   }
 
-  useEffect(() => {
-    let block = document.getElementById("project-description");
-    setOffset({
-      bottom: `${calcOffset(block.offsetWidth)}px`,
-    });
-    block = document.getElementById("project-menu");
-    setMenuOffset({
-      bottom: `${calcOffset(block.offsetWidth + 10)}px`,
-    });
-  }, []);
-
   return (
     <div className="focus-collection col-start">
       <div className="row-between small-nav">
         <div className="row-between" id="project-menu">
-          {allProjects.map(renderNavs)}
-        </div>
-        <div className="project-menu-button-container" style={menuOffset}>
-          <DoubleVertical id="project-menu-button">
-            <button className="project-menu-button" onClick={props.revert}>
-              <ProjectMenu />
-            </button>
-          </DoubleVertical>
+          {projects.map(renderNavs)}
         </div>
       </div>
-      <ProjectDescription offset={offset} />
+      <ProjectDescription
+        id={projects[props.currentProject].id}
+        offset={offset}
+      />
     </div>
   );
 }

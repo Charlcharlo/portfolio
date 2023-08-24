@@ -1,0 +1,80 @@
+:root {
+  --solar-title: raleway;
+  --solar-body: poppins;
+
+  --dark-shadow: 0 0 4px var(--black-blue);
+  --light-shadow: 0 0 4px var(--white-yellow);
+}
+
+@font-face {
+  font-family: "raleway";
+  src: url("../../../fonts/Raleway-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../../../fonts/Poppins-Regular.ttf");
+}
+
+.solar-header {
+  padding-top: 40px;
+  background-image: url("/images/solar-field.jpg");
+  background-size: cover;
+  background-position-y: center;
+}
+
+.solar-title {
+  font-family: var(--solar-title);
+  font-size: var(--h1-sub);
+  color: var(--dark-blue);
+  text-shadow: var(--light-shadow);
+  margin: 0 20px;
+}
+
+.solar-title > span {
+  color: var(--bright-yellow);
+  text-shadow: var(--dark-shadow);
+}
+
+.solar-header .desc-links {
+  margin-left: 20px;
+}
+
+.solar-header .desc-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 5px;
+  font-family: var(--solar-title);
+  color: var(--dark-blue);
+  box-shadow: var(--dark-shadow);
+}
+
+.solar-header .desc-link:hover {
+  background-color: var(--white-blue);
+  box-shadow: var(--light-shadow);
+}
+
+.fade {
+  height: 70px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    var(--white-blue)
+  );
+}
+
+.solar-body {
+  background-color: var(--white-blue);
+  padding: 20px 20px 50px;
+}
+
+.solar-body .paragraph {
+  font-family: var(--solar-body);
+  font-size: 1.2rem;
+}
+
+.solar-subtitle {
+  font-family: var(--solar-title);
+  font-size: var(--h2);
+  color: var(--dark-blue);
+}

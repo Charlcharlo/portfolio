@@ -4,7 +4,7 @@ import DividerTop from "../layout/DividerTop";
 
 export default function MediaLinks() {
   return (
-    <DividerTop>
+    <DividerTop id="splash-top">
       <a className="icon-link" href="">
         <GitHub />
       </a>
