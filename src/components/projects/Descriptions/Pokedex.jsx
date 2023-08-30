@@ -47,6 +47,26 @@ export default function Pokedex() {
             makes a get request to the API to get a full list of all Pokémon
             currently in existence. This is then sorted into a trie data
             structure in order to provide faster searching for the autocomplete.
+            Trie is short for retrieval and this is what this data structure
+            does. It all starts with the root node which has a number of null
+            children called nodes based on your alphabet size. When a string is
+            sorted into the trie, each character in the string is assigned to
+            its respective node, which is then also given the same null children
+            as the root. This process is repeated recursively until you have
+            reached the end of the string and it is in this node that the data
+            is stored.
+          </p>
+          <p className="paragraph">
+            The benefit of this data structure compared to an array is that the
+            search algorithm doesn’t have to search the entire list to find the
+            data it’s looking for. The list returned from Pokeapi is sorted by
+            dex number, so if for example you were searching for the Pokemon
+            Mew, you would have to search through 151 entries in the list before
+            you found it. In a trie, you would only have to go three levels deep
+            as that is the length of the string, “Mew”. This is an incredible
+            amount of time saved, especially considering that the autocomplete
+            nature of this app requires it to search the list every time the
+            value of the search bar changes.
           </p>
           <p className="paragraph">
             One of the immediate challenges I faced here is that the API stores

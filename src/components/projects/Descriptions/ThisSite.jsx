@@ -67,9 +67,9 @@ export default function ThisSite() {
           on load and calculates the clip path based on that. This is achieved
           with a UseEffect hook which runs on mount and whenever the width of
           the document changes, as this would affect the width of many of the
-          elements on the page. Another thing this hook calculates is the
-          vertical offset of each component, moving them up as neeed so that the
-          gap between elements is smaller and so that elements rendered
+          elements on the page. Another thing the code in this hook calculates
+          is the vertical offset of each component, moving them up as neeed so
+          that the gap between elements is smaller and so that elements rendered
           side-by-side would all follow the same line.
         </p>
         <p className="paragraph">

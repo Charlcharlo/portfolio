@@ -5,10 +5,15 @@ import DividerTop from "../layout/DividerTop";
 export default function MediaLinks() {
   return (
     <DividerTop id="splash-top">
-      <a className="icon-link" href="">
+      <a
+        className="icon-link"
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/Charlcharlo"
+      >
         <GitHub />
       </a>
-      <a className="icon-link" href="">
+      <a className="icon-link" target="_blank" rel="noreferrer" href="">
         <LinkedIn />
       </a>
     </DividerTop>
