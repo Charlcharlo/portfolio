@@ -14,7 +14,7 @@ export default function BackToTop({ scrollToTop, visible }) {
             <h2 className="section-subtitle">Back to top</h2>
             <img
               className="btt-image"
-              src={`${window.location.origin}/images/balloon.png`}
+              src={`${window.location.origin}/portfolio/images/balloon.png`}
             />
           </button>
         </BottomOnly>

@@ -17,7 +17,7 @@ export default function StackContainer() {
         {flex && (
           <img
             className="flexed-about-img"
-            src={`${window.location.origin}/images/charl-peace.png`}
+            src={`${window.location.origin}/portfolio/images/charl-peace.png`}
           />
         )}
       </div>

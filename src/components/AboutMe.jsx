@@ -18,7 +18,7 @@ export default function AboutMe() {
       {!flex && (
         <img
           className="about-img"
-          src={`${window.location.origin}/images/charl-peace.png`}
+          src={`${window.location.origin}/portfolio/images/charl-peace.png`}
         />
       )}
       <div className="col-start about-details">

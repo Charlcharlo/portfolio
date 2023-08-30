@@ -28,7 +28,10 @@ export default function FocusDisplay(props) {
               props.currentProject === i && "selected"
             }`}
           >
-            <img src={`${window.location.origin}/images/${item.img}`} alt="" />
+            <img
+              src={`${window.location.origin}/portfolio/images/${item.img}`}
+              alt=""
+            />
             {!flex && <h3>{item.name}</h3>}
           </div>
         </DoubleVertical>

@@ -30,7 +30,7 @@ export default function Contact() {
       <DividerTop id="contact-top" />
       <img
         className="contact-header-img"
-        src={`${window.location.origin}/images/Tins.png`}
+        src={`${window.location.origin}/portfolio/images/Tins.png`}
       />
       <h1 className="contact-title" style={mainOffset}>
         Get In Touch

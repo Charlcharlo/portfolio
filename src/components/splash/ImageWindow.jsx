@@ -22,7 +22,7 @@ export default function ImageWindow() {
       <DoubleVertical id="image-window">
         <div className="window-contents">
           <img
-            src={`${window.location.origin}/images/morningside-color-fix.jpg`}
+            src={`${window.location.origin}/portfolio/images/morningside-color-fix.jpg`}
             alt=""
           />
           <div className="window-title col-between">

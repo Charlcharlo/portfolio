@@ -36,7 +36,7 @@ export default function Pokedex() {
           </p>
           <div className="desc-img-group">
             <img
-              src={`${window.location.origin}/images/dex-example.png`}
+              src={`${window.location.origin}/portfolio/images/dex-example.png`}
               alt=""
             />
             <figcaption>An example Pokédex entry.</figcaption>

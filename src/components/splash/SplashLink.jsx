@@ -10,7 +10,7 @@ export default function SplashLink(props) {
       >
         <div className="link-contents">
           <img
-            src={`${window.location.origin}/images/${props.data.img}`}
+            src={`${window.location.origin}/portfolio/images/${props.data.img}`}
             alt=""
           />
           <h2 className="card-title">{props.data.name}</h2>

@@ -6,7 +6,7 @@ export default function ProjectButton(props) {
       <DoubleVertical id={props.id} index={props.index} sibling={true}>
         <div className="link-contents">
           <img
-            src={`${window.location.origin}/images/${props.data.img}`}
+            src={`${window.location.origin}/portfolio/images/${props.data.img}`}
             alt=""
           />
           <h2 className="card-title">{props.data.name}</h2>
