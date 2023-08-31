@@ -1,3 +1,4 @@
+import Link from "../../layout/Link";
 import DoubleVertical from "../../offsets/DoubleVertical";
 import DescriptionWrapper from "../DescriptionWrapper";
 import GitHubLink from "../Links/GitHubLink";
@@ -24,16 +25,19 @@ export default function RollForShoes() {
                 looking forward to creating was a character manager of some
                 sort, and thus my first personal project was a character
                 generator for the game Roll for Shoes. Roll For Shoes is a
-                simple, open-source TTRPG thought up way back in 2010 on
-                StoryGames by a user called Dweird. The rules for the game can
-                be found here, but in short, it is a game wherein you play a
-                character starting with no skills and gain skills depending on
-                how well you roll a six-sided die. Whenever you attempt to do
-                anything within the game, you have to roll a six-sided die and
-                aim to get a four or higher. If you roll a six on any roll, you
-                get to add a die to your pool for any similar roll in the
-                future, thus building a specialized character based solely on
-                luck.
+                simple, open-source TTRPG thought up way back in 2010 on{" "}
+                <Link href="https://web.archive.org/web/20200619145843/http://story-games.com/forums/discussion/11348/microdungeons-i-roll-to-see-if-i-have-shoes-on">
+                  StoryGames
+                </Link>{" "}
+                by a user called Dweird. The rules for the game can be found{" "}
+                <Link href="https://rollforshoes.com/">here</Link>, but in
+                short, it is a game wherein you play a character starting with
+                no skills and gain skills depending on how well you roll a
+                six-sided die. Whenever you attempt to do anything within the
+                game, you have to roll a six-sided die and aim to get a four or
+                higher. If you roll a six on any roll, you get to add a die to
+                your pool for any similar roll in the future, thus building a
+                specialized character based solely on luck.
               </p>
               <h2 className="shoe-subtitle">Technical Description</h2>
               <p className="paragraph">

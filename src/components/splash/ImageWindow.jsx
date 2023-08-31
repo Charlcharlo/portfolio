@@ -11,6 +11,7 @@ export default function ImageWindow() {
         rel="noreferrer"
         href={link.link}
         className="invisibutton"
+        key={link.link}
       >
         <ContactIcon name={link.icon} />
       </a>

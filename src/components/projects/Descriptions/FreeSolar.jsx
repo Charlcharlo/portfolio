@@ -2,6 +2,7 @@ import "./FreeSolar.css";
 import DescriptionWrapper from "../DescriptionWrapper";
 import GitHubLink from "../Links/GitHubLink";
 import SiteLink from "../Links/SiteLink";
+import Link from "../../layout/Link";
 
 export default function FreeSolar() {
   return (
@@ -31,14 +32,19 @@ export default function FreeSolar() {
         </p>
         <p className="paragraph">
           The website itself is a fairly static page containing information
-          about the company as well as a products page and a repository of
-          useful information about solar power conversion. The products section
-          of the website was designed to be more of a catalog than an online
-          shop as the nature of the business revolves around customized products
-          based on the space and existing infrastructure. Thus each product
-          links to a custom contact form wherein the customer can enquire about
-          the availability of their desired product and ask further questions
-          about the evaluation and installation process.
+          about the company as well as a{" "}
+          <Link href="https://freesolarza.co.za/products">products page</Link>{" "}
+          and a{" "}
+          <Link href={"https://freesolarza.co.za/knowledge-base"}>
+            repository of useful information
+          </Link>{" "}
+          about solar power conversion. The products section of the website was
+          designed to be more of a catalog than an online shop as the nature of
+          the business revolves around customized products based on the space
+          and existing infrastructure. Thus each product links to a custom
+          contact form wherein the customer can enquire about the availability
+          of their desired product and ask further questions about the
+          evaluation and installation process.
         </p>
         <h2 className="solar-subtitle">How data is stored and edited</h2>
         <p className="paragraph">
@@ -64,7 +70,10 @@ export default function FreeSolar() {
           needed. The editor accesses the site&apos;s public directory to load
           and preview images used in articles and product descriptions. It also
           has the capability of editing text on the site’s home page as well as
-          meta descriptions and keywords. This was achieved using React Helmet
+          meta descriptions and keywords. This was achieved using{" "}
+          <Link href="https://www.npmjs.com/package/react-helmet">
+            React Helmet
+          </Link>{" "}
           on the front end.
         </p>
         <p className="paragraph">

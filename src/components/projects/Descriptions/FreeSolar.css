@@ -75,6 +75,15 @@
 
 .solar-subtitle {
   font-family: var(--solar-title);
-  font-size: var(--h2);
+  font-size: var(--h3);
   color: var(--dark-blue);
+}
+
+.solar-body a {
+  text-decoration: underline;
+  color: var(--darker-blue);
+}
+
+.solar-body a:hover {
+  color: var(--main-blue);
 }

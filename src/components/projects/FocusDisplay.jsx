@@ -21,7 +21,7 @@ export default function FocusDisplay(props) {
 
   function renderNavs(item, i) {
     return (
-      <div className="tab small" onClick={() => props.chooseItem(i)}>
+      <div className="tab small" onClick={() => props.chooseItem(i)} key={i}>
         <DoubleVertical id={`small-tab-${i}`} index={i} sibling={true}>
           <div
             className={`link-contents ${
