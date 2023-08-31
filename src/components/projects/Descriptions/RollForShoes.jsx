@@ -16,8 +16,8 @@ export default function RollForShoes() {
             </div>
             <div className="shoes-body">
               <div className="row-start desc-links">
-                <GitHubLink />
-                <SiteLink />
+                <GitHubLink link="https://github.com/Charlcharlo/roll-for-shoes" />
+                <SiteLink link="https://roll-for-shoes.onrender.com/" />
               </div>
               <h2 className="shoe-subtitle">About</h2>
               <p className="paragraph">
