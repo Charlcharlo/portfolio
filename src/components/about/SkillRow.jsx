@@ -17,7 +17,7 @@ export default function SkillRow({ data, show }) {
       id={`${data.title}-skills`}
     >
       <div className="skills blue">
-        <div className="skills-division-title">Fluent</div>
+        <div className="skills-division-title">Confident</div>
         <div className="row-start">{data.fluent.map(renderSkills)}</div>
       </div>
       <div className="skills green">
