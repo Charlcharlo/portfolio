@@ -80,6 +80,18 @@ export const techStack = [
         description: "",
         icon: "vscode",
       },
+      {
+        name: "GitHub",
+        icon: "github",
+      },
+      {
+        name: "Git",
+        icon: "git",
+      },
+      {
+        name: "Node Package Manager",
+        icon: "npm",
+      },
     ],
     comfortable: [
       {
