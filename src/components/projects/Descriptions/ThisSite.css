@@ -31,3 +31,11 @@
   margin-top: 20px;
   font-size: var(--h3);
 }
+
+.portfolio-body .desc-footer .button-wrapper {
+  margin-bottom: 0;
+}
+
+.portfolio-body .project-menu-button {
+  transform: skewY(var(--neg-angle));
+}

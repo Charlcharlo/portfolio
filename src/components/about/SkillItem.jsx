@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { isMobile } from "react-device-detect";
-// import { isMobile } from "react-device-detect";
 import Languages from "../Icons/routers/Languages";
 import SkillDetails from "./SkillDetails";
 
@@ -28,29 +26,10 @@ export default function SkillItem({ data }) {
 
   return (
     <div>
-      {isMobile ? (
-        <>
-          <button
-            className="skill-icon"
-            onClick={() => {
-              const modal = document.getElementById(`${id}-modal`);
-              modal.showModal();
-            }}
-          >
-            <Languages name={data.icon} />
-          </button>
-          <dialog className="skill-modal" id={`${id}-modal`}>
-            <SkillDetails data={data} modal={true} id={id} />
-          </dialog>
-        </>
-      ) : (
-        <>
-          <div className="skill-icon" onMouseMoveCapture={handleMouseMove}>
-            <Languages name={data.icon} />
-          </div>
-          <SkillDetails data={data} positioning={detailsStyle} id={id} />
-        </>
-      )}
+      <div className="skill-icon" onMouseMoveCapture={handleMouseMove}>
+        <Languages name={data.icon} />
+      </div>
+      <SkillDetails data={data} positioning={detailsStyle} id={id} />
     </div>
   );
 }

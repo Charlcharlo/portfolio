@@ -1,8 +1,10 @@
 import "./FreeSolar.css";
 import DescriptionWrapper from "../DescriptionWrapper";
-import GitHubLink from "../Links/GitHubLink";
 import SiteLink from "../Links/SiteLink";
 import Link from "../../layout/Link";
+import GitHub from "../../Icons/GitHub";
+import DescriptionFooter from "../DescriptionFooter";
+import DescImage from "../../layout/DescImage";
 
 export default function FreeSolar() {
   return (
@@ -12,7 +14,24 @@ export default function FreeSolar() {
           Freesolar<span>ZA</span>
         </h1>
         <div className="row-start desc-links">
-          <GitHubLink />
+          <a
+            className="desc-link row-between"
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/Charlcharlo/free-solar-site"
+          >
+            <p>Main Site Repo</p>
+            <GitHub />
+          </a>
+          <a
+            className="desc-link row-between"
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/Charlcharlo/freesolar-text-editor"
+          >
+            <p>Editor Repo</p>
+            <GitHub />
+          </a>
           <SiteLink link="https://freesolarza.co.za/" />
         </div>
         <div className="fade" />
@@ -30,6 +49,7 @@ export default function FreeSolar() {
           information. So along with this hosted website, I also built an
           offline editor so that content could be edited without hassle.
         </p>
+        <DescImage src="solar-home.png" caption="The homepage editor." />
         <p className="paragraph">
           The website itself is a fairly static page containing information
           about the company as well as a{" "}
@@ -52,7 +72,7 @@ export default function FreeSolar() {
           opted to build a pure frontend application in React without needing to
           worry about maintaining a database service and running into any
           unforeseen complications. In order to achieve this, I opted to use
-          static JSON files hosted on the site’s server itself to store the
+          static JSON files hosted on the site&apos;s server itself to store the
           owner&apos;s changes to the site.The text editor mentioned above is
           used to generate and edit these JSON files, which are then uploaded
           directly to the server along with associated images. We opted to use
@@ -66,21 +86,45 @@ export default function FreeSolar() {
           JSON files into Javascript objects which were then rendered into the
           page and styled accordingly. The editor was similarly built in React
           but with an Express JS backend which would write files to the
-          project’s main folder so that they could be moved onto the server when
-          needed. The editor accesses the site&apos;s public directory to load
-          and preview images used in articles and product descriptions. It also
-          has the capability of editing text on the site’s home page as well as
-          meta descriptions and keywords. This was achieved using{" "}
+          project&apos;s main folder so that they could be moved onto the server
+          when needed. The editor accesses the site&apos;s public directory to
+          load and preview images used in articles and product descriptions. It
+          also has the capability of editing text on the site’s home page as
+          well as meta descriptions and keywords. This was achieved using{" "}
           <Link href="https://www.npmjs.com/package/react-helmet">
             React Helmet
           </Link>{" "}
           on the front end.
         </p>
         <p className="paragraph">
-          If you would like to view the editor, please click here for a GitHub
-          repo containing the editor’s code complete with mock data and
-          instructions on how to run it locally.
+          If you would like to view the editor, please click{" "}
+          <Link href="https://github.com/Charlcharlo/freesolar-text-editor">
+            here
+          </Link>{" "}
+          for a GitHub repo containing the editor’s code complete with mock data
+          and instructions on how to run it locally.
         </p>
+        <DescriptionFooter>
+          <a
+            className="desc-link row-between"
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/Charlcharlo/free-solar-site"
+          >
+            <p>Main Site Repo</p>
+            <GitHub />
+          </a>
+          <a
+            className="desc-link row-between"
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/Charlcharlo/freesolar-text-editor"
+          >
+            <p>Editor Repo</p>
+            <GitHub />
+          </a>
+          <SiteLink link="https://freesolarza.co.za/" />
+        </DescriptionFooter>
       </div>
     </DescriptionWrapper>
   );

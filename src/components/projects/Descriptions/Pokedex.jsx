@@ -1,5 +1,6 @@
 import DescImage from "../../layout/DescImage";
 import Link from "../../layout/Link";
+import DescriptionFooter from "../DescriptionFooter";
 import DescriptionWrapper from "../DescriptionWrapper";
 import GitHubLink from "../Links/GitHubLink";
 import SiteLink from "../Links/SiteLink";
@@ -101,6 +102,10 @@ export default function Pokedex() {
             on and Pokémon games are still coming out to this day.
           </p>
         </div>
+        <DescriptionFooter>
+          <GitHubLink link="https://github.com/Charlcharlo/simple-pokedex" />
+          <SiteLink link="https://verysimplepokedex.netlify.app/" />
+        </DescriptionFooter>
       </div>
     </DescriptionWrapper>
   );

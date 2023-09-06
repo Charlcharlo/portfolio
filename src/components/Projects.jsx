@@ -1,24 +1,25 @@
 import { useState } from "react";
 import "../styles/projects/projects.css";
 import { useFlex } from "./context/FlexContext";
+import { useFocus, useSetFocus } from "./context/FocusContext";
 import ProjectMenu from "./Icons/ProjectMenu";
 import DividerTop from "./layout/DividerTop";
 import FocusDisplay from "./projects/FocusDisplay";
 import MainDisplay from "./projects/mainDisplay";
 
 export default function Projects() {
-  const [focus, setFocus] = useState(false);
+  const focus = useFocus();
+  const toggleFocus = useSetFocus();
   const [currentProject, setCurrenProject] = useState(null);
   const flex = useFlex();
 
   function chooseItem(index) {
-    setFocus(true);
+    !focus && toggleFocus();
     setCurrenProject(index);
   }
 
   function revertToMain() {
-    setFocus(false);
-    setCurrenProject(null);
+    toggleFocus();
   }
 
   return (
@@ -38,11 +39,7 @@ export default function Projects() {
       </div>
       <DividerTop id="projects-top" />
       {focus ? (
-        <FocusDisplay
-          chooseItem={chooseItem}
-          revert={revertToMain}
-          currentProject={currentProject}
-        />
+        <FocusDisplay chooseItem={chooseItem} currentProject={currentProject} />
       ) : (
         <MainDisplay chooseItem={chooseItem} />
       )}

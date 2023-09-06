@@ -58,17 +58,12 @@ export const techStack = [
         description: "",
         icon: "mongodb",
       },
+    ],
+    beginner: [
       {
         name: "Java",
         description: "",
         icon: "java",
-      },
-    ],
-    beginner: [
-      {
-        name: "SQL",
-        description: "",
-        icon: "sql",
       },
     ],
   },

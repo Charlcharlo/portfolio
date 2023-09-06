@@ -78,7 +78,8 @@
   margin-top: 20px;
 }
 
-.dex-body .desc-link {
+.dex-body .desc-link,
+.dex-body .project-menu-button {
   background-color: var(--white-blue);
   box-shadow: inset 0 0 4px var(--gray-blue);
   border-radius: 20px;
@@ -86,10 +87,27 @@
   font-family: var(--poke-bit-font);
   font-size: 25px;
   color: var(--black-blue);
+  width: 150px;
+  justify-content: space-between;
 }
 
-.dex-body .desc-link:hover {
+.dex-body .desc-link:hover,
+.dex-body .project-menu-button:hover {
   background-color: var(--pale-blue);
+}
+
+.dex-body .project-menu-title {
+  font-family: var(--poke-bit-font);
+  font-size: 25px;
+}
+
+.dex-body .project-menu-button:hover .project-menu-title {
+  color: var(--black-blue);
+}
+
+.dex-body .project-menu-button svg {
+  height: 30px;
+  width: 30px;
 }
 
 .dex-body .desc-main-body {

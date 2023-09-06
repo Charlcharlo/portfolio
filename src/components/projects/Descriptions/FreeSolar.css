@@ -40,13 +40,16 @@
   margin-left: 20px;
 }
 
-.solar-header .desc-link {
+.solar-header .desc-link,
+.solar-body .desc-link {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   padding: 5px;
   font-family: var(--solar-title);
   color: var(--dark-blue);
   box-shadow: var(--dark-shadow);
+  width: 200px;
+  text-decoration: none;
 }
 
 .solar-header .desc-link:hover {
@@ -86,4 +89,26 @@
 
 .solar-body a:hover {
   color: var(--main-blue);
+}
+
+.solar-body .desc-img-group img {
+  border-radius: 10px;
+  box-shadow: var(--dark-shadow);
+}
+
+.solar-body .desc-img-group figcaption {
+  font-family: var(--solar-body);
+  color: var(--med-blue);
+}
+
+@media (max-width: 800px) {
+  .solar-header .desc-link {
+    font-size: 18px;
+    width: 180px;
+  }
+
+  .solar-header .desc-link svg {
+    height: 20px;
+    width: 20px;
+  }
 }
